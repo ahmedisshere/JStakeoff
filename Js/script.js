@@ -10,3 +10,5 @@ console.log("the task is complete!");
 // toUpperCase() -> makes characters capital
 // toLowerCase() -> makes characters small
 // trim() -> cuts off the spaces front and behind of a string
+// parseInt() -> prints as an integer number even the main variable is a float
+// parseFloat() -> prints the float 
