@@ -18,7 +18,7 @@
 
 
 
-// ARRAY ->>
+// ARRAY methods -->>
 
 // var countries = [ "Bangladesh" , "Canada" , "Germany" ] ;
 
@@ -40,3 +40,40 @@
 // countries.shift() -> terminates the first item of an array and prints it 
 
 // countries.unshift("Bangladesh") -> it adds an item to the first index of an array, or as a first item
+
+
+// var numbers = [] -> this is how you print an empty array 
+
+// -->> converting an array to a string 
+
+// var x = "Bangladesh" ;
+
+// var y = x.split(""); -> we have to set the value as empty so that the string splits character by character 
+// -> result will be ->> y = ["B","a","n","g","l","a","d","e","s","h"];
+
+
+// converting an array to a string 
+
+// var x = ["Bangladesh" , "is" , "a", "country"]
+
+// y=x.toString();
+
+// result will be -> "Bangladesh,is,a,country";
+
+// -> to overcome this -->>
+
+// y = x.join(" ");
+
+// result will be -> "Bangladesh is a country";
+
+
+// -->> concatinating 2 arrays -->>
+
+// var z = array1.concat(array2); -> this will merge 2 different arrays into one and print as a new array containing all the members of both of the arrays 
+
+// -->> Sorting an array -->>
+
+// countries.sort(); -> this method will print the values of the array in the character order wise/dictonary wise, also it will change the whole array 
+//                       value as a variabl
+
+// countries.reverse(); -> this is the reverse of the sort method, it will print the values as reverse character order wise 
