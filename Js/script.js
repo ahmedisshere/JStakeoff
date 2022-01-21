@@ -1,5 +1,9 @@
-var c,d;
-c = prompt("what's the temperature?");
-d = 9/5*c + 32;
-window.alert("the temperature in fahrenheit is-> " + d + " degree");
-console.log("the task is complete!");
+var age = prompt();
+
+if(age >= 50){
+    console.log("You're an OLD ass MF");
+}else{
+    console.log("You gotta grow");
+}
+
+console.log("TF you lookin at?");
