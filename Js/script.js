@@ -8,17 +8,17 @@ n3 = parseInt(n3);
 
 if (n1 >= n2){
     if(n1 >= n3){
-        document.write(n1 + " is the largest Number!");
+        document.write(n1 + " is the Number that we are looking for!");
     }
     else{
-        document.write(n3 + " is the largest Number!");
+        document.write(n3 + " is the Number that we are looking for!");
     }
 }
 else{
     if(n2 >= n3){
-        document.write(n2 + " Is the largest Number!");
+        document.write(n2 + " Is the Number that we are looking for!");
     }
     else{
-        document.write(n3 + " Is the largest Number!");
+        document.write(n3 + " Is the Number that we are looking for!");
     }
 }
