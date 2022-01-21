@@ -77,3 +77,19 @@
 //                       value as a variabl
 
 // countries.reverse(); -> this is the reverse of the sort method, it will print the values as reverse character order wise 
+
+
+// -->> Nested arrays -->>
+
+// array = [1,2,[bruh1,bruh2],3 -> this is how it looks;
+
+// -> if we want to call the bruh2 element , then ->
+//  array [2] [1]; -> this is how we are gonna call it ;
+
+//  -> if we want to put an object inside an array, then ->
+
+//  array = [1,2,[bruh1,bruh2], {property1: "Hello" , property2:"world"}] ; -> this is how we will do it;
+
+//  -> if we want to call the value of the property, then ->
+
+//  array [3] ["property1"]; or array [3].property1; -> this is how we will call it;
