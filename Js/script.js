@@ -1,17 +1,19 @@
-var age = prompt();
+var n1 = prompt("First number: ");
+var n2 = prompt("Second number: ");
+var n3 = prompt("Third number: ");
 
-if(age >= 50){
-    console.log("You're an OLD ass MF");
+n1 = parseInt(n1);
+n2 = parseInt(n2);
+n3 = parseInt(n3);
+
+if( n1 >= n2 && n1 >= n3){
+    document.write(n1 + " is the largest number!");
 }
-else if(age >=30 && age < 50){
-    console.log("You can still do a lot in life!");
+else if(n2 >= n1 && n2 >= n3){
+    document.write(n2 + " is the largest number!");
 }
 else{
-    console.log("You gotta grow tf up!");
+    document.write(n3 + " is the largest number");
 }
 
-
-
-
-
-console.log("TF you lookin at?");
+console.log("The job is done mf!");
