@@ -18,7 +18,7 @@
 
 
 
-// ARRAY methods -->>
+// ARRAY functionalities -->>
 
 // var countries = [ "Bangladesh" , "Canada" , "Germany" ] ;
 
