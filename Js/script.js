@@ -1,27 +1,22 @@
-console.log("Select an option : \na. Option 1 \nb. Option 2 \nc. Option 3");
+input = prompt("What is your number?");
 
-choice = prompt();
+var grade = input;
 
-var text;
-
-switch (choice) {
-
-    case "a":
-        text = "Option 1 is selected";
-        break;
-
-    case "b":
-        text = "Option 2 is selected";
-        break;
-
-    case "c":
-        text = "Option 3 is selected";
-        break;
-        
-    default:
-        text = "No option is selected!";
-        break;
+if(grade >= 33 && grade <= 45){
+    console.log("Your grade: D");
 }
-
-
-console.log(text);
+else if(grade >= 46 && grade <= 55){
+    console.log("Your grade: C");
+}
+else if(grade >= 56 && grade <= 79){
+    console.log("Your grade: B");
+}
+else if( grade >= 80 && grade <=100){
+    console.log("your grade: A");
+}
+else if(grade <= 32 && grade >= 0){
+    console.log("Your grade: Fail");
+}
+else{
+    console.log("Invalid Number Input");
+}
