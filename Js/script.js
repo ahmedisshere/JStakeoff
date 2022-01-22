@@ -12,7 +12,7 @@ num1con = isNaN(num1);
 num2con = isNaN(num2);
 Opscon = isNaN(Ops);
 
-var result;
+var result = null;
 
 if (num1con || num2con || Opscon) {
     console.log("Invalid input");
