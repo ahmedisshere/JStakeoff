@@ -1,22 +1,34 @@
-var grade = prompt("What is your number?");
+console.log("Choose an Operation : \na. Add \nb. Substract \nc. Multiply \nd. Divide");
 
-grade = parseInt(grade);
+num1 = prompt("What's your first number?");
+num2 = prompt("What's your second number?");
+Ops = prompt("Choose an operation?");
 
-if(grade >= 33 && grade <= 45){
-    console.log("Your grade: D");
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+
+var result;
+
+switch (Ops) {
+    case "a" :
+        result = num1+num2;
+        break;
+
+    case  "b" :
+        result = num1-num2;
+        break;
+
+    case  "c" :
+        result = num1*num2;
+        break;
+
+    case  "d" :
+        result = num1/num2;
+        break;
+
+    default:
+        result = "Invalid Input!";
+        break;
 }
-else if(grade >= 46 && grade <= 55){
-    console.log("Your grade: C");
-}
-else if(grade >= 56 && grade <= 79){
-    console.log("Your grade: B");
-}
-else if( grade >= 80 && grade <=100){
-    console.log("your grade: A+");
-}
-else if(grade <= 32 && grade >= 0){
-    console.log("Your grade: Fail");
-}
-else{
-    console.log("Invalid Number Input");
-}
+
+console.log("Your Result is -> " + result);
