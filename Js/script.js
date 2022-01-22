@@ -1,24 +1,27 @@
-var n1 = prompt("First Number: ");
-var n2 = prompt("Second Number: ");
-var n3 = prompt("Third Number: ");
+console.log("Select an option : \na. Option 1 \nb. Option 2 \nc. Option 3");
 
-n1 = parseInt(n1);
-n2 = parseInt(n2);
-n3 = parseInt(n3);
+choice = prompt();
 
-if (n1 >= n2){
-    if(n1 >= n3){
-        document.write(n1 + " is the Number that we are looking for!");
-    }
-    else{
-        document.write(n3 + " is the Number that we are looking for!");
-    }
+var text;
+
+switch (choice) {
+
+    case "a":
+        text = "Option 1 is selected";
+        break;
+
+    case "b":
+        text = "Option 2 is selected";
+        break;
+
+    case "c":
+        text = "Option 3 is selected";
+        break;
+        
+    default:
+        text = "No option is selected!";
+        break;
 }
-else{
-    if(n2 >= n3){
-        document.write(n2 + " Is the Number that we are looking for!");
-    }
-    else{
-        document.write(n3 + " Is the Number that we are looking for!");
-    }
-}
+
+
+console.log(text);
