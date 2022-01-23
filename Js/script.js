@@ -21,3 +21,4 @@ for(var y of food){
 for(var z in person){
     console.log(`prop ${z} and value ${person[z]}`);
 }
+
