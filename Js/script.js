@@ -6,13 +6,17 @@ var i;
 var sum = 0;
 series = "";
 
+// 1 
+
 for( i = 1 ; i<= n ; i++){
 
     sum += i**2;
     series += (i**2).toString();
+
     if(i == n){
 
         continue;
+
     }
 
     series += " + ";
@@ -20,4 +24,4 @@ for( i = 1 ; i<= n ; i++){
 }
 
 console.log(`${series} = ${sum}`);
-// console.log(series);
+
