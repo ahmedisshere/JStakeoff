@@ -1,25 +1,23 @@
-let ign = "I am kicking JavaScripts big ass butt!" ;
+console.log("Sum of the series of square numbers!");
 
-let food = ["Burger","Pizza","Hot Dawg","Kebab"] ;
+var n = parseInt(prompt("what's the size?? ;)"));
 
-let person = {
-    name: "Superleggera",
-    profession: "Counter Strike",
-    team: "Bangladesh",
-    age: 69
+var i;
+var sum = 0;
+series = "";
+
+for( i = 1 ; i<= n ; i++){
+
+    sum += i**2;
+    series += (i**2).toString();
+    if(i == n){
+
+        continue;
+    }
+
+    series += " + ";
+    
 }
 
-for(var x in food){
-    console.log(`Index  ${x} and item ${food[x]}`);
-}
-
-for(var y of food){
-    console.log(y);
-}
-
-
-for(var z in person){
-    console.log(`prop ${z} and value ${person[z]}`);
-}
-
-
+console.log(`${series} = ${sum}`);
+// console.log(series);
