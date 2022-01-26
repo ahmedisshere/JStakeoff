@@ -8,8 +8,7 @@ function saySomething(name1) {
 }
 
 
-
-// Function expression 
+// Function expression -->>
 
 let saySomething1 = function (name2){
     
