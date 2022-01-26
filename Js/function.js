@@ -1,15 +1,15 @@
-// // // There are 2 types of function -->
+// // // // There are 2 types of function -->
 
-// // 1. Built in function 
-// // 2. User defined function 
-
-
-// -->> user defined function 
+// // // 1. Built in function 
+// // // 2. User defined function 
 
 
-function doSomething(){
+// // -->> user defined function 
 
-    console.log("Go moo your neighbours lawn! ~ ");
-    console.log("Eat some grass!");
-    
-}
+
+// function doSomething(){
+
+//     console.log("Go moo your neighbours lawn! ~ ");
+//     console.log("Eat some grass!");
+
+// }
