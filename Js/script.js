@@ -1,10 +1,14 @@
-doSomething();
 
 
-function doSomething(){
 
-    console.log("Go moo your neighbours lawn! ~ ");
-    console.log("Eat some grass!");
-    
+function doSomething( name1 = "braga", name2="amanda" ) {
+
+    console.log(`Hello ${name1} -> ${name2}!`);
+
 }
+
+let fname = "tabib";
+let lname = "shiam";
+
+doSomething (); 
 
