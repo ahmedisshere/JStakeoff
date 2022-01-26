@@ -1,27 +1,21 @@
 console.log("Sum of the series of square numbers!");
 
-var n = parseInt(prompt("what's the size?? ;)"));
+var n = parseInt( prompt("Whats the size? ;)") );
 
-var i;
 var sum = 0;
-series = "";
+var series = "";
 
-// 1 
-
-for( i = 1 ; i<= n ; i++){
+for(var i = 1 ; i <= n ; i++) {
 
     sum += i**2;
-    series += (i**2).toString();
+    series += (i**2);
 
-    if(i == n){
+    if( i == n) {
 
         continue;
 
     }
-
     series += " + ";
-    
 }
 
 console.log(`${series} = ${sum}`);
-
