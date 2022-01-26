@@ -1,6 +1,8 @@
 // Normal expression
 
-function saySomething(name1){
+
+
+function saySomething(name1) {
 
     console.log("Hello " + name1);
 }
