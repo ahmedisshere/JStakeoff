@@ -1,14 +1,26 @@
+// Normal expression
 
+function saySomething(name1){
 
-
-function doSomething( name1 = "braga", name2="amanda" ) {
-
-    console.log(`Hello ${name1} -> ${name2}!`);
-
+    console.log("Hello " + name1);
 }
 
-let fname = "tabib";
-let lname = "shiam";
 
-doSomething (); 
 
+// Function expression 
+
+let saySomething1 = function (name2){
+    
+    console.log("Yo " + name2);
+}
+
+//Arrow function
+
+let saySomething2 = name3 => {
+
+    console.log("Waddup " + name3);
+}
+
+saySomething("Superleggeraa");
+saySomething1("cartman_");
+saySomething2("fatman_");
