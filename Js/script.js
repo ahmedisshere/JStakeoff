@@ -1,26 +1,13 @@
-// array iteration with foreach 
+let friend = {
 
-var foods = ["Ice cream" , "chocolate" , "Cake" , "Pizza"];
+    firstname: "Tabib",
+    lastname: "Gondafi",
+    dob: "1-10-1996",
 
-var numbers = [1,21,32,4];
-
-
-
-function foodMaping(item){
-
-    return ` ${item} is a food`;
-
+    fullname : function(){
+        return `${this.firstname} ${this.lastname}`;
+    }
 }
 
-
-let array_restore = foods.map(foodMaping);
-
-let array_square = numbers.map(function(item){
-
-    return item*item;
-})
-
-console.log(array_restore);
-console.log(array_square);
-
-
+console.log(friend.firstname);
+console.log(friend.fullname());
