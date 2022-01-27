@@ -11,3 +11,8 @@ let friend = {
 
 console.log(friend.firstname);
 console.log(friend.fullname());
+
+
+let str = "superleggeraa";
+console.log(str.length);
+console.log(str.slice());
