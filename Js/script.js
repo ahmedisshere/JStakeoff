@@ -2,7 +2,7 @@
 
 var foods = ["Ice cream" , "chocolate" , "Cake" , "Pizza"];
 
-var numbers = [1,2,3,4];
+var numbers = [1,21,32,4];
 
 
 
@@ -15,6 +15,12 @@ function foodMaping(item){
 
 let array_restore = foods.map(foodMaping);
 
+let array_square = numbers.map(function(item){
+
+    return item*item;
+})
+
 console.log(array_restore);
+console.log(array_square);
 
 
