@@ -20,7 +20,7 @@ val = today.getTime();     // Prints TimeStamp -> Timestamp is the amount of sec
 
 
 
-// console.log(val);
+// We can change the value of the bDay using set functions as below ->>
 
 bDay.setMonth(6);
 bDay.setDate(4);
