@@ -28,7 +28,7 @@ if(true){
 
 console.log('global scope: ', a,b,c);
 
-for(var a = 0; a<10; a++){
+for(var a = 0; a<=10; a++){
 
     console.log('Loop scope :' , a);
 
