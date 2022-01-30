@@ -1,42 +1,30 @@
-// var let const -> Understanding Global & Local scope
+class Person{
+    
+    constructor(fname,lname,birthday){
 
-var a = 1;
-let b = 2;
-const c = 3;
+        this.firstname = fname ;
+        this.lastname = lname;
+        this.dob = birthday;
+    }
 
-console.log('global scope: ', a, b, c);
+    fullName() {
+        console.log(this.firstname,this.lastname);
+    }
 
-function test() {
+    calcualteAge() {
 
-    var a = 4;
-    let b = 5;
-    const c = 6;
-    console.log('function scope: ', a, b, c);
-
+        let birthday = new Date(this.dob);
+        let difference = Date.now() - birthday.getTime();
+        let ageDate = new Date(difference);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
 }
 
-test();
+let person1 = new Person("Tausif", "Ahmed", "05-03-1996");
+let person2 = new Person("Nabiha","Tahsin","01-01-1999");
 
-console.log( 'global scope: ', a, b, c );
+console.log(person1.fullName());
+console.log(person2.fullName());
 
-if (true) {
-
-    var a = 7;
-    let b = 8;
-    const c = 9;
-    console.log('if scope: ', a, b, c);
-
-}
-
-
-console.log('global scope: ', a, b, c);
-
-
-for (var a = 0; a < 10; a++) {
-
-    console.log('Loop scope :', a);
-
-}
-
-console.log('global scope: ', a, b, c);
+console.log( `${person2.firstname}'s age ->`, person2.calcualteAge());
 
