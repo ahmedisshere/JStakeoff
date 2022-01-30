@@ -17,7 +17,7 @@ function test() {
 
 test();
 
-console.log('global scope: ', a, b, c);
+console.log( 'global scope: ', a, b, c );
 
 if (true) {
 
