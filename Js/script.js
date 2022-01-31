@@ -17,3 +17,15 @@ val = document.getElementById('document-title').textContent = 'There is a Legend
 val = document.getElementById('document-title');
 
 val.innerText = 'He will rise from the scratches';
+
+val = document.querySelector('ol');
+
+val = document.querySelector('ul li');
+
+val.style.background = 'teal';
+
+val = document.querySelector('li:nth-child(3)');
+
+
+
+console.log(val);
