@@ -1,43 +1,30 @@
-// Understanding subClass and inheritence ->
+// Static function
 
-class Person {   // -> base class 
+class Person {
 
-    constructor(fname,lname) {
+    constructor (fname,lname) {
+        
         this.firstname = fname;
         this.lastname = lname;
+
     }
 
-    greetings() {
+    greetings(){
 
         console.log(`Hello ${this.firstname} ${this.lastname}`);
 
     }
-}
 
+    static test() {
 
-class Customer extends Person {   // -> sub class
-
-    constructor(fname,lname,phone,memberShip){
-
-        super (fname,lname);
-        this.phone = phone;
-        this.memberShip = memberShip;
+        console.log("this is a static function");
 
     }
 
-    fullname() {
-        console.log(this.firstname,this.lastname);
-    }
 }
 
-let person1 = new Person("Tausif","Ahmed");
-let customer1 = new Customer ("Nabiha","Tahsin","01848045850","1234");
+let person1 = new Person("Tausif" , "Ahmed");
 
-console.log(person1);
 console.log(person1.greetings());
-console.log(customer1);
-console.log(customer1.greetings());
+console.log(Person.test());
 
-console.log(person1.firstname);
-console.log(customer1.lastname);
-console.log(customer1.fullname());
