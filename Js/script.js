@@ -31,3 +31,4 @@ val.innerText = 'Laravel';
 
 
 console.log(val);
+
