@@ -1,43 +1,19 @@
+// document.getElementById()
+
 let val;
 
-val = this;
-val = window;
-val = window.document;
-val = document;
-val = document.all;
-val = document.all.length;
-val = document.all[7];
-val = document.domain;
-val = document.URL;
-val = document.head;
-val = document.doctype;
+val = document.getElementById('document-title');
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].method;
+// changing css
 
-val = document.links;
-val = document.links[1];
-val = document.links[1].href;
-val = document.links[1].className;
+val = document.getElementById('document-title').style.background = '#87cefac4';
 
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[0].src;
-val = document.scripts[0].getAttribute('src');
+val = document.getElementById('document-title').style.padding = '20px';
 
-val = document.links;
+val = document.getElementById('document-title').style.marginTop = '50px';
 
-links = document.links;
+val = document.getElementById('document-title').textContent = 'There is a Legend on the make ~ ';
 
-let linkArr = Array.from(links);
+val = document.getElementById('document-title');
 
-linkArr.forEach(function (link) {
-
-    console.log(link);
-
-})
-
-
-
-console.log(val);
+val.innerText = 'He will rise from the scratches';
