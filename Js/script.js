@@ -1,4 +1,6 @@
-class Person {
+// Understanding subClass and inheritence ->
+
+class Person {   // -> base class 
 
     constructor(fname,lname) {
         this.firstname = fname;
@@ -13,7 +15,7 @@ class Person {
 }
 
 
-class Customer extends Person {
+class Customer extends Person {   // -> sub class
 
     constructor(fname,lname,phone,memberShip){
 
