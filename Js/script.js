@@ -1,30 +1,41 @@
-class Person{
-    
-    constructor(fname,lname,birthday){
+class Person {
 
-        this.firstname = fname ;
+    constructor(fname,lname) {
+        this.firstname = fname;
         this.lastname = lname;
-        this.dob = birthday;
     }
 
-    fullName() {
-        console.log(this.firstname,this.lastname);
-    }
+    greetings() {
 
-    calcualteAge() {
+        console.log(`Hello ${this.firstname} ${this.lastname}`);
 
-        let birthday = new Date(this.dob);
-        let difference = Date.now() - birthday.getTime();
-        let ageDate = new Date(difference);
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 }
 
-let person1 = new Person("Tausif", "Ahmed", "05-03-1996");
-let person2 = new Person("Nabiha","Tahsin","01-01-1999");
 
-console.log(person1.fullName());
-console.log(person2.fullName());
+class Customer extends Person {
 
-console.log( `${person2.firstname}'s age ->`, person2.calcualteAge());
+    constructor(fname,lname,phone,memberShip){
 
+        super (fname,lname);
+        this.phone = phone;
+        this.memberShip = memberShip;
+
+    }
+
+    fullname() {
+        console.log(this.firstname,this.lastname);
+    }
+}
+
+let person1 = new Person("Tausif","Ahmed");
+let customer1 = new Customer ("Nabiha","Tahsin","01848045850","1234");
+
+console.log(person1);
+console.log(person1.greetings());
+console.log(customer1);
+console.log(customer1.greetings());
+
+console.log(person1.firstname);
+console.log(customer1.lastname);
+console.log(customer1.fullname());
