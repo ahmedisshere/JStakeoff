@@ -1,37 +1,42 @@
-// multiselector
+// Traversing DOM
+
+let val ;
+
+let list = document.querySelector('ul');
+
+let listItem = document.querySelector('ul li:last-child');
 
 
-let list = document.getElementsByClassName('sample-class');
+// getting child nodes
 
-// get elemts by id
+val = list;
+val = list.childNodes;
+val = list.childNodes[1].nodeName;
+val = list.childNodes[0].nodeType; 
 
-list = document.getElementsByTagName('li');
-list = document.querySelector('ul').getElementsByTagName('li');
+// -->> notype returns ->
 
-let lis = Array.from(list);
-
-lis.forEach(function(item) {
-    console.log(item);
-})
-
-
-list = document.querySelectorAll('ul li');
-
-list.forEach(function(item){
-    console.log(item);
-})
+// 1 -> element
+// 2 -> attribute
+// 3 -> text node
+// 8 -> comment
+// 9 -> document itself
+// 10 -> doctype
 
 
-let liOdd = document.querySelectorAll('li:nth-child(odd)');
-let liEven = document.querySelectorAll('li:nth-child(even)');
+val = list.children;
 
-liOdd.forEach(function(item) {
-    item.style.background = 'red';
-    item.style.color = 'white';
-})
+val = list.children[0];
 
+list.children[0].textContent = 'babes';
 
-liEven.forEach(function(item){
-    item.style.background = 'gray';
-    item.style.color = 'white';
-})
+val = list.children[1].children[0];
+
+val = list.children[2].children[0].href;
+
+val = list.firstChild;
+
+val = list.firstElementChild;
+
+console.log(val);
+
