@@ -22,11 +22,8 @@ list.forEach(function(item){
 })
 
 
-
 let liOdd = document.querySelectorAll('li:nth-child(odd)');
 let liEven = document.querySelectorAll('li:nth-child(even)');
-
-
 
 liOdd.forEach(function(item) {
     item.style.background = 'red';
