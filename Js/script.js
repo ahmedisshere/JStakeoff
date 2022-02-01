@@ -7,3 +7,5 @@ function message() {
     console.log("Button clicked!");
     
 }
+
+console.log(message());
