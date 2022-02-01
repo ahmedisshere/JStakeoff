@@ -4,7 +4,7 @@ let val ;
 
 let list = document.querySelector('ul');
 
-let listItem = document.querySelector('ul li:last-child');
+let listItem = document.querySelector('ul li:first-child');
 
 
 // getting child nodes
@@ -14,7 +14,7 @@ val = list.childNodes;
 val = list.childNodes[1].nodeName;
 val = list.childNodes[0].nodeType; 
 
-// -->> notype returns ->
+// -->> nodetype returns ->
 
 // 1 -> element
 // 2 -> attribute
@@ -37,6 +37,32 @@ val = list.children[2].children[0].href;
 val = list.firstChild;
 
 val = list.firstElementChild;
+
+val = list.lastChild;
+
+val = list.lastElementChild;
+
+val = list.childElementCount;
+
+val = listItem;
+
+val = listItem.parentElement;
+
+val = listItem.parentNode;
+
+val = listItem.parentElement.parentElement;
+
+
+//
+
+
+val = listItem.nextElementSibling.nextElementSibling;
+
+//
+
+val = document.querySelector('ul li:last-child');
+
+val = val.previousElementSibling.previousElementSibling;
 
 console.log(val);
 
