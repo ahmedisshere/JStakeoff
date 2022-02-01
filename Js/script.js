@@ -26,7 +26,8 @@ link.setAttribute('href','https://www.instagram.com');
 link.setAttribute('target','_blank');
 
 ulItem.appendChild(link);
-link.appendChild(document.createTextNode('instagram'));
+
+link.appendChild(document.createTextNode('Instagram'));
 
 document.querySelector('ul').appendChild(ulItem);
 
