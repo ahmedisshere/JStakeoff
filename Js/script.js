@@ -18,4 +18,16 @@ olItem.appendChild( document.createTextNode('Next.js') );
 document.querySelector('ol').appendChild(olItem);
 
 
-console.log(olItem);
+
+let ulItem = document.createElement('li');
+let link = document.createElement('a');
+
+link.setAttribute('href','https://www.instagram.com');
+link.setAttribute('target','_blank');
+
+ulItem.appendChild(link);
+link.appendChild(document.createTextNode('instagram'));
+
+document.querySelector('ul').appendChild(ulItem);
+
+console.log(ulItem);
