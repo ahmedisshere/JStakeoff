@@ -28,7 +28,5 @@ val = document.querySelector('li:nth-child(4)');
 
 val.innerText = 'Laravel';
 
-
-
 console.log(val);
 
