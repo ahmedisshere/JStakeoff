@@ -26,7 +26,7 @@ val.style.background = 'teal';
 
 val = document.querySelector('li:nth-child(4)');
 
-val.innerText = 'Laravel';
+val.innerText = 'Laravel 8';
 
 console.log(val);
 
