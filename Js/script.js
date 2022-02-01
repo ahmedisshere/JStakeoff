@@ -1,17 +1,28 @@
-// replacing an element
+// removing an element \
 
-let newHeading = document.createElement('h1');
+let listItems = document.querySelectorAll('li');
 
-newHeading.className = 'sample-class padding';
+let list = document.querySelector('ul');
 
-newHeading.appendChild(document.createTextNode('Superleggeraa\'s tent'));
+// listItems[0].remove();
+// listItems[6].remove();
 
-let parent = document.querySelector('div');
-let oldHeading = document.querySelector('h3');
+// list.removeChild(listItems[5]);
 
-parent.replaceChild(newHeading,oldHeading);
+list.classList.add('test-class');
+list.classList.add('new-test');
+
+list.classList.remove('test-class');
+
+let val = list.hasAttribute('title');
+
+list.setAttribute('title','new title');
+list.setAttribute('bullshit','want some shit?');
+
+list.removeAttribute('bullshit');
 
 
-console.log(newHeading);
-console.log(oldHeading);
-console.log(parent);
+
+console.log(val);
+console.log(listItems);
+console.log(list);
