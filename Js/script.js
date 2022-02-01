@@ -1,32 +1,15 @@
-// document.getElementById()
+// multiselector
+// getelementsbyclassname ->
 
-let val;
+let list = document.getElementsByClassName('sample-class');
 
-val = document.getElementById('document-title');
+// get elemts by id
 
-// changing css
+list = document.getElementsByTagName('li');
+list = document.querySelector('ul').getElementsByTagName('li');
 
-val = document.getElementById('document-title').style.background = '#87cefac4';
+let lis = Array.from(list);
 
-val = document.getElementById('document-title').style.padding = '20px';
-
-val = document.getElementById('document-title').style.marginTop = '50px';
-
-val = document.getElementById('document-title').textContent = 'There is a Legend on the make ~ ';
-
-val = document.getElementById('document-title');
-
-val.innerText = 'He will rise from the scratches';
-
-val = document.querySelector('ol');
-
-val = document.querySelector('ul li');
-
-val.style.background = 'teal';
-
-val = document.querySelector('li:nth-child(4)');
-
-val.innerText = 'Laravel 8';
-
-console.log(val);
-
+lis.forEach(function(item) {
+    console.log(item);
+})
