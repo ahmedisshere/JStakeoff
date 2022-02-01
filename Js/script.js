@@ -1,34 +1,17 @@
-// adding element to dom
+// replacing an element
 
-// creating elemet 
+let newHeading = document.createElement('h1');
 
-let olItem = document.createElement('li');
+newHeading.className = 'sample-class padding';
 
-olItem.className = 'new-class';
-olItem.id = 'newid';
+newHeading.appendChild(document.createTextNode('Superleggeraa\'s tent'));
 
-// adding attribute
+let parent = document.querySelector('div');
+let oldHeading = document.querySelector('h3');
 
-olItem.setAttribute('title','a title to new element');
+parent.replaceChild(newHeading,oldHeading);
 
-// creating new item in ordered list ->
 
-olItem.appendChild( document.createTextNode('Next.js') );
-
-document.querySelector('ol').appendChild(olItem);
-
-// New item in the unordered list ->
-
-let ulItem = document.createElement('li');
-let link = document.createElement('a');
-
-link.setAttribute('href','https://www.instagram.com');
-link.setAttribute('target','_blank');
-
-ulItem.appendChild(link);
-
-link.appendChild(document.createTextNode('Instagram'));
-
-document.querySelector('ul').appendChild(ulItem);
-
-console.log(ulItem);
+console.log(newHeading);
+console.log(oldHeading);
+console.log(parent);
