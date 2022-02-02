@@ -1,10 +1,20 @@
 // event listener ->>
 
-document.getElementById('btn').addEventListener('click',message);
+document.querySelector('#name').addEventListener('focus',test);
 
-function message() {
+document.querySelector('#name').addEventListener('keyup',pop);
 
-    console.log("Button clicked!");
+
+function test(e) {
+
+    this.style.background = "teal";
+
+}
+
+
+function pop(e) {
+
+    document.getElementById('demo').innerText = this.value;
     
 }
 
