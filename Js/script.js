@@ -1,44 +1,41 @@
-// regular expression
-
 let re;
 let str;
 
+// literal characters ->
+
 re = /hello/;
-re = /Hello/;
-re = /hello/i;  // i -> declares the variable as case insensitive
+str = "hello superleggera";
+str = "hello sup";
 
-console.log(re);
-console.log(re.source);
+// meta characters ->
 
-str = "Hello world";
-str = "again hello world";
-str = "asashelloasda world";
-str = "hello world";
-str = "again hello world hello";
-str = "hello world";
+re = /^hello/;     // ^ means must start with the expression
+re = /hello$/      // $ means must end with the expression
+re = /^hello$/;    // ^$ means must start and end with the expression
+re = /h.llo/;      // . means there can be any character in the place of the dot
+re = /h*llo/;      // * means there can be any number of characteres in the place of *
+re = /he?llo/;     // ? means there can be only the character which is before of ? or there can't be any character -> also there can be multiple ? marks
+re = /hello\?/      // ? at last means with a \ means ? is now a part of the expression
 
-// exec () - returns the result in an array or null.
+str = "yo world hello";
+str = "hello hello";
+str = "hello";
+str = "hillo";
+str = "hello?";
 
-let result = re.exec(str);
+console.log(re.exec(str));
 
-// test() ->  returns result in boolean -> true/false
+resTest(re, str);
 
-result = re.test(str);
+function resTest() {
 
-// match() -> returns value in a similar way like exec () -> but the declaration is reversed ->
+    if (re.test(str)) {
 
-result = str.match(re);
+        console.log(`${str} matches with ${re.source}`);
 
-// search () -> returns the index of the first match or null
+    }
+    else {
 
-result = str.search(re);
-
-// replace() -> replaces the new expression with the old expression
-
-str = "again hello world hello";
-
-let newstr = str.replace(re, "hi");
-
-console.log(newstr);
-
-
+        console.log(`${str} doesn't match with ${re.source}`);
+    }
+}
