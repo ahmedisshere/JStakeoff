@@ -29,7 +29,16 @@ result = re.test(str);
 
 result = str.match(re);
 
+// search () -> returns the index of the first match or null
 
-console.log(result);
+result = str.search(re);
+
+// replace() -> replaces the new expression with the old expression
+
+str = "again hello world hello";
+
+let newstr = str.replace(re, "hi");
+
+console.log(newstr);
 
 
