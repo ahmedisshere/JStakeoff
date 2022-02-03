@@ -1,20 +1,17 @@
-// event listener ->>
-
-document.querySelector('#name').addEventListener('focus',test);
-
-document.querySelector('#name').addEventListener('keyup',pop);
+// error handling
 
 
-function test(e) {
+console.log("before test");
 
-    this.style.background = "teal";
+try {
+
+    test();
+
+}catch (err) {
+
+    console.log(err.message);
+    console.log(err.name);
 
 }
 
-
-function pop(e) {
-
-    document.getElementById('demo').innerText = this.value;
-    
-}
-
+console.log("after test");
