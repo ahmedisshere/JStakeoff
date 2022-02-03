@@ -17,11 +17,11 @@ re = /h*llo/;      // * means there can be any number of characteres in the plac
 re = /he?llo/;     // ? means there can be only the character which is before of ? or there can't be any character -> also there can be multiple ? marks
 re = /hello\?/      // ? at last means with a \ means ? is now a part of the expression
 
-str = "yo world hello";
-str = "hello hello";
-str = "hello";
-str = "hillo";
-str = "hello?";
+
+// character sets using third bracket []
+
+
+
 
 console.log(re.exec(str));
 
