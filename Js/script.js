@@ -13,5 +13,10 @@ try {
     console.log(err.name);
 
 }
+finally{
+
+    console.log("I'm inside finally");
+    
+}
 
 console.log("after test");
