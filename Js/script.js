@@ -1,35 +1,25 @@
-// error handling
+// regular expression
+
+let re;
+let str;
+
+re = /hello/;
+re = /Hello/;
+re = /hello/i;  // i -> declares the variable as case insensitive
+
+console.log(re);
+console.log(re.source);
+
+str = "Hello world";
+str = "again hello world";
+str = "asashelloasda world";
+str = "hello world";
+str = "again hello world hello";
+
+// exec () - returns the result in an array or null.
+
+let result = re.exec(str);
+
+console.log(result);
 
 
-console.log("before test");
-
-try {
-
-    test();
-
-} catch (err) {
-
-    console.log(err.message);
-    console.log(err.name);
-
-}
-finally {
-
-    console.log("I'm inside finally");
-
-}
-
-console.log("after test");
-
-let a = 20;
-
-try {
-
-    if (a < 20) throw "Too small";
-    else if (a > 25) throw "too big";
-
-} catch (err) {
-
-    console.log(err);
-
-}
