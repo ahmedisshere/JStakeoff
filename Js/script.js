@@ -20,6 +20,14 @@ re = /hello\?/      // ? at last means with a \ means ? is now a part of the exp
 
 // character sets using third bracket []
 
+re = /h[ea]llo/;         // [] one of the items inside the bracket must be in the expression,but can't be all the items together at a time
+re = /[HA]ello/i;
+re = /[^He]llo/;         // [^] means there can be anything instead of the items inside the brackets
+re = /^[he]llo/;         // ^[] means the expression must start with any of the items inside the brackets
+
+str = "heallo world";
+str = "haello world";
+str = "jallo";
 
 
 
