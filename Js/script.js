@@ -56,9 +56,10 @@ re = /^\+8801[0-9]{9}$/;
 str = "12321";
 str = "+8801621807007";
 
-
-
 console.log(re.exec(str));
+
+
+
 
 resTest(re, str);
 
@@ -69,7 +70,7 @@ function resTest() {
         console.log(`${str} matches with ${re.source}`);
 
     }
-    
+
     else {
 
         console.log(`${str} doesn't match with ${re.source}`);
