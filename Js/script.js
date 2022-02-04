@@ -69,6 +69,7 @@ function resTest() {
         console.log(`${str} matches with ${re.source}`);
 
     }
+    
     else {
 
         console.log(`${str} doesn't match with ${re.source}`);
