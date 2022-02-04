@@ -24,10 +24,27 @@ re = /h[ea]llo/;         // [] one of the items inside the bracket must be in th
 re = /[HA]ello/i;
 re = /[^He]llo/;         // [^] means there can be anything instead of the items inside the brackets
 re = /^[he]llo/;         // ^[] means the expression must start with any of the items inside the brackets
+re = /[a-z]ello/;        // [-] means range, there can by any character inside the brackets depending on the range,
+re = /^[A-Z]/;           // means the first character must be uppercase
+re = /^[a-z]/;           // means the first character must be lowercase
+re = /[A-Za-z]/;         // means the first character can be in any case
+re = /[A-Za-z]ello/;     // means the first character can be in any case, also it will look for the rest of the characters which are inside the [],                           also the can be any amount of characters in the place of the range
+re = /[0-9]ello/;        // means there should be a digit in the start of the expression
+re = /^[0-9]ello/;       // means the expressio should be in the first including the range
+re = /[^0-9]ello/;       // means there can be anything instead of the range which is menntioned
+re = /[0-9][0-9][0-9]ello/;   // means there can be multiple digit/character ranges in an expression
+
+
+
+
 
 str = "heallo world";
 str = "haello world";
 str = "jallo";
+str = "utyqweqewqello";
+str = "6ello woowow";
+str = "pello";
+str = "988ello";
 
 
 
