@@ -42,18 +42,19 @@ re = /hel{2,5}o/;     // means l can be there in the expression any number of ti
 re = /hel{2,}o/;      // means l should be there for atleast 2 times or more
 
 
+// parenthesis ()  -> grouping
+
+re = /^([0-9]){5}/;  // means its equal for this -> /^[0-9][0-9][0-9][0-9][0-9]/  = 5 digits
 
 
 
-str = "heallo world";
-str = "haello world";
-str = "jallo";
-str = "utyqweqewqello";
-str = "6ello woowow";
-str = "pello";
-str = "988ello";
-str = "helllllo";
-str = "hellllllllllllllllllllllo";
+// lets check a Bangladeshi phone number pattern -> using all the methods mentioned above
+
+re = /^01[0-9]{9}$/;
+re = /^\+8801[0-9]{9}$/;
+
+str = "12321";
+str = "+8801621807007";
 
 
 
