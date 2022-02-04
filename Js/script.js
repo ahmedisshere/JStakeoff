@@ -35,6 +35,13 @@ re = /[^0-9]ello/;       // means there can be anything instead of the range whi
 re = /[0-9][0-9][0-9]ello/;   // means there can be multiple digit/character ranges in an expression
 
 
+// Braces -> {}    -->> Quantifier
+
+re = /hel{2}o/;       // means l should be there for the exact number of times mentioned inside of the braces
+re = /hel{2,5}o/;     // means l can be there in the expression any number of time following the range
+re = /hel{2,}o/;      // means l should be there for atleast 2 times or more
+
+
 
 
 
@@ -45,6 +52,8 @@ str = "utyqweqewqello";
 str = "6ello woowow";
 str = "pello";
 str = "988ello";
+str = "helllllo";
+str = "hellllllllllllllllllllllo";
 
 
 
