@@ -1,28 +1,15 @@
-// Regular expression examples
-let re;
-let str;
+var student = {
 
-// Postal codes -> 1205
+    name: "nabiha tahsin",
+    age: "72",
+    location: "Dhaka"
 
-re = /^[0-9]{4}$/;
-str = "1205";
+};
 
-// Mobile number examples -> 016218087007
+let student_json = JSON.stringify(student);
 
-re = /^01[0-9]{9}$/;
-re = /^(\+)?(88)?01[0-9]{9}$/;
-// ->
-str = "01621807007";
-str = "01621807007";
+console.log(student_json);
 
-// Email address expressions ->
-// ex = tausifahmed8.git@dev.com.bd
+let student_new = JSON.parse(student_json);
 
-re = /^([a-zA-Z0-9]\.?)+[^\.]@([a-zA-Z0-9]\.?)+[^\.]$/;
-
-str = "tausifahmed8.git@dev.com.bd"; 
-
-
-
-
-console.log(re.test(str));
+console.log(student_new);
