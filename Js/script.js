@@ -56,6 +56,8 @@ re = /^\+8801[0-9]{9}$/;
 str = "12321";
 str = "+8801621807007";
 
+// short hand characters
+
 console.log(re.exec(str));
 
 
