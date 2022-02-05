@@ -66,6 +66,12 @@ re = /hello\b/;    // -> word boundary, means there can't be any characters atta
 re = /\bhello\b/;  // -> this way we can put boundaries in an expression in both sides
 
 
+// Assertions -->>
+
+re = /x(?=y)/;      // Means X must be put before Y or Y must be after X
+re = /x(?!y)/;      // Means X can't be before Y
+
+
 
 str = "12321";
 str = "+8801621807007";
@@ -76,6 +82,7 @@ str = ")*&%^*^@*^$";
 str = "ss ";
 str = " ";
 str = "hello ";
+str = "aasxsydasd"
 
 // short hand character classes 
 
