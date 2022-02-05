@@ -52,11 +52,18 @@ re = /^([0-9]){5}/;  // means its equal for this -> /^[0-9][0-9][0-9][0-9][0-9]/
 
 re = /^01[0-9]{9}$/;
 re = /^\+8801[0-9]{9}$/;
+re = /\w/;     // -> word characters -> alpha numeric or _
+re = /\w+/;    // -> means one or more word characters
+re = /\W/;     // -> capital means non word characters 
+
 
 str = "12321";
 str = "+8801621807007";
+str = "&^%";
+str = "*&^%9";
+str = "(^&*%(*^&%";
 
-// short hand characters
+// short hand character classes 
 
 console.log(re.exec(str));
 
