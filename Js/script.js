@@ -84,7 +84,7 @@ str = " ";
 str = "hello ";
 str = "aasxsydasd"
 
-// short hand character classes 
+// Short hand character classes ->>
 
 console.log(re.exec(str));
 
