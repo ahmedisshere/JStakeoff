@@ -52,10 +52,19 @@ re = /^([0-9]){5}/;  // means its equal for this -> /^[0-9][0-9][0-9][0-9][0-9]/
 
 re = /^01[0-9]{9}$/;
 re = /^\+8801[0-9]{9}$/;
-re = /\w/;     // -> word characters -> alpha numeric or _
-re = /\w+/;    // -> means one or more word characters
-re = /\W/;     // -> capital means non word characters 
-re = /\W+/;    // -> means one or more non word characters
+re = /\w/;         // -> word characters -> alpha numeric or _
+re = /\w+/;        // -> means one or more word characters
+re = /\W/;         // -> capital means non word characters 
+re = /\W+/;        // -> means one or more non word characters
+re = /\d/;         // -> means it will look for digits in an expression
+re = /\d+/;        // -> one or more digits in an expression
+re = /\D/;         // -> NON digits in an expression
+re = /\D+/;        // -> ONE or more NON digits in an expression
+re = /\s/;         // -> matches with white space
+re = /\S/;         // -> DOESN'T match with white space
+re = /hello\b/;    // -> word boundary, means there can't be any characters attached where the \b is placed
+re = /\bhello\b/;  // -> this way we can put boundaries in an expression in both sides
+
 
 
 str = "12321";
@@ -64,6 +73,9 @@ str = "&^%";
 str = "*&^%9";
 str = "(^&*%(*^&%";
 str = ")*&%^*^@*^$";
+str = "ss ";
+str = " ";
+str = "hello ";
 
 // short hand character classes 
 
