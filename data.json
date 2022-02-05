@@ -1,0 +1,34 @@
+{
+
+	"gamers": [
+
+		{
+			"name": "cartman",
+			"age": 25,
+			"location": "moon",
+			"married": false
+		},
+
+		{
+			"name": "fatman",
+			"age": 24,
+			"location": "uranus",
+			"married": true
+		},
+
+		{
+			"name": "godspeed",
+			"age": 26,
+			"location": "mars",
+			"married": false
+		},
+
+		{
+			"name": "movemint",
+			"age": 23,
+			"location": "pluto",
+			"married": true
+		}
+
+	]
+}

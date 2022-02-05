@@ -1,19 +1,29 @@
-// JSON.stringify() -> Converts JS object to a JSON string
-// JSON.parse() -> Converts JSON string to JS object
+// ajax ->
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = this.responseText;
+        jsonData(data);
+    }
+}
+
+xmlhttp.open("GET", "data.json", true);
+xmlhttp.send();
 
 
-let gamer1 = {
+function jsonData(json_object) {
 
-    "name": "cartman",
-    "age": 69,
-    "location": "moon",
-    "married": false
-
-};
-
-let gamer_json = JSON.stringify(gamer1);
-let gamer_object = JSON.parse(gamer_json);
+    var js_object = JSON.parse(json_object);
 
 
-console.log(gamer_object);
-console.log(gamer_object.married);
+    for (x in js_object.gamers) {
+        
+        var gamerS = js_object.gamers;
+
+        for (y in gamerS[x]){
+
+            console.log(gamerS[x][y]);
+        }
+    }
+}
