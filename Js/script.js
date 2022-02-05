@@ -55,6 +55,7 @@ re = /^\+8801[0-9]{9}$/;
 re = /\w/;     // -> word characters -> alpha numeric or _
 re = /\w+/;    // -> means one or more word characters
 re = /\W/;     // -> capital means non word characters 
+re = /\W+/;    // -> means one or more non word characters
 
 
 str = "12321";
@@ -62,6 +63,7 @@ str = "+8801621807007";
 str = "&^%";
 str = "*&^%9";
 str = "(^&*%(*^&%";
+str = ")*&%^*^@*^$";
 
 // short hand character classes 
 
