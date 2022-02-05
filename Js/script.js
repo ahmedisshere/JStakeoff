@@ -1,38 +1,19 @@
-// jsonlint.com
-// JSON supports ->
-// string
-// Number
-// Object
-// Array
-// Boolean
-// Null
-
-//doesn't support undefined/function/date format
+// JSON.stringify() -> Converts JS object to a JSON string
+// JSON.parse() -> Converts JSON string to JS object
 
 
+let gamer1 = {
 
-var student = {
+    "name": "cartman",
+    "age": 69,
+    "location": "moon",
+    "married": false
 
-    name: "nabiha tahsin",
-    age: 72,
-    location: "Dhaka",
-    dob: "1999 - 01 - 01",
-    test_null: null,
-    test_undefined: undefined,
-    greet: function () {
-        console.log(`Hello ${this.name}`);
-    }
 };
 
-var student_json = JSON.stringify(student);
-console.log(student_json);
+let gamer_json = JSON.stringify(gamer1);
+let gamer_object = JSON.parse(gamer_json);
 
 
-
-// let student_json = JSON.stringify(student);
-
-// console.log(student_json);
-
-// let student_new = JSON.parse(student_json);
-
-// console.log(student_new);
+console.log(gamer_object);
+console.log(gamer_object.married);
