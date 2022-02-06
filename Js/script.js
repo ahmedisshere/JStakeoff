@@ -18,7 +18,6 @@ function jsonData(json_object) {
 
 
     for (x in js_object.gamers) {
-        
         var gamerS = js_object.gamers;
 
         for (y in gamerS[x]){
