@@ -1,8 +1,9 @@
 // using AJAX to fetch data without loading the page
 // AJAX = Asynchronous JavaScript and XML
-// Different kind of status -> 
+// Different kind of onload status -> 
 // 200 -> "OK", 403 = "Forbidden", 404 = "Not Found";
-
+// Different kind of ready state status ->
+// 0 -> "request not initialized", 1 -> "server connection established", 3 -> "request received", 4 -> "processing request" 5 -> "request finished and   process is ready"
 
 document.getElementById('get_data').addEventListener('click', loadData);
 
@@ -14,14 +15,24 @@ function loadData() {
 
     xhr.open('GET', 'data.txt', true);
 
-    xhr.onload = function () {
+    // xhr.onload = function () {
+    //     if (this.status === 200) {
+    //         document.getElementById('output').innerHTML = `<h2>${this.responseText}</h2>`;
+    //     }
+    // }
 
-        if (this.status === 200) {
+    // Using onreadystatechange function to do the loading
 
-            document.getElementById('output').innerHTML = `<h2>${this.responseText}</h2>`;
+    xhr.onreadystatechange = function(){
+
+        if(this.status===200 && this.readyState === 4){
+
+            console.log(this.responseText);
 
         }
     }
 
     xhr.send();
+
 }
+
