@@ -2,11 +2,23 @@
 
 document.getElementById('get_data').addEventListener('click', loadJokes);
 
+
+
 function loadJokes() {
+
+    let number = document.getElementById('numberJokes').value;
 
     let xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'http://api.icndb.com/jokes/random', true);
+    console.log(number);
+
+    xhr.open( 'GET', `http://api.icndb.com/jokes/random/${number}`, true );
+
+    xhr.onprogress = function(){
+
+        document.getElementById('output').innerHTML = "<h4> loading ... </h4>";
+
+    }
 
     xhr.onload = function () {
 
@@ -14,18 +26,25 @@ function loadJokes() {
 
             let data = JSON.parse(this.responseText);
 
-            let joke = data.value.joke;
+            let jokes = data.value;
 
-            console.log(joke);
+            output = "<ul>";
 
-            document.getElementById('output').innerHTML = ` <h3> ${joke} </h3> `;
+            jokes.forEach (function(item) {
 
+                output += `<li>${item.joke}</li>`;
 
+            });
+
+            output += "</ul>";
+
+            console.log(jokes);
+
+            document.getElementById('output').innerHTML = ` <h4> ${output} </h4> `;
 
         }
     }
 
     xhr.send();
-
 
 }

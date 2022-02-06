@@ -1,6 +1,6 @@
 .main{
 
-    background-color: darkslateblue;
+    background-color: #0B202B;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
@@ -26,5 +26,5 @@
 
 .btn:hover{
     color: white !important;
-    background-color: darkcyan;
+    background-color: #13C1E3;
 }
