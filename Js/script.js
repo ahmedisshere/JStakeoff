@@ -15,24 +15,30 @@ function loadData() {
 
     xhr.open('GET', 'data.txt', true);
 
-    // xhr.onload = function () {
-    //     if (this.status === 200) {
-    //         document.getElementById('output').innerHTML = `<h2>${this.responseText}</h2>`;
-    //     }
-    // }
+    xhr.onprogress = function(){
 
-    // Using onreadystatechange function to do the loading
+        console.log(xhr.readyState);
 
-    xhr.onreadystatechange = function(){
-
-        if(this.status===200 && this.readyState === 4){
-
-            console.log(this.responseText);
-
-        }
     }
 
-    xhr.send();
+    xhr.onload = function () {
+        if (this.status === 200) {
+            
+            document.getElementById('output').innerHTML = `<h2>${this.responseText}</h2>`;
+    
+        }
+    }
+    // Using onreadystatechange function to do the loading
 
+    // xhr.onreadystatechange = function(){
+
+    //     // console.log(this.readyState);
+
+    //     if(this.status===200 && this.readyState === 4){
+
+    //         console.log(this.readyState);
+    //     }
+    // }
+    xhr.send();
 }
 
