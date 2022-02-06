@@ -3,20 +3,19 @@
 document.getElementById('get_data').addEventListener('click', loadJokes);
 
 
-
 function loadJokes() {
 
     let number = document.getElementById('numberJokes').value;
 
     let xhr = new XMLHttpRequest();
 
-    console.log(number);
+    console.log (number) ;
 
     xhr.open( 'GET', `http://api.icndb.com/jokes/random/${number}`, true );
 
     xhr.onprogress = function(){
 
-        document.getElementById('output').innerHTML = "<h4> loading ... </h4>";
+        document.getElementById('output').innerHTML = "<h4> Down the rabbithole . . . </h4>";
 
     }
 
@@ -32,7 +31,7 @@ function loadJokes() {
 
             jokes.forEach (function(item) {
 
-                output += `<li>${item.joke}</li>`;
+                output += `<li>${item.joke}</li>`
 
             });
 
@@ -40,7 +39,7 @@ function loadJokes() {
 
             console.log(jokes);
 
-            document.getElementById('output').innerHTML = ` <h4> ${output} </h4> `;
+            document.getElementById('output').innerHTML = ` <h5> ${output} </h5> `;
 
         }
     }

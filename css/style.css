@@ -8,15 +8,20 @@
 
 }
 .main:hover{
+
     color: white;
+    
 }
 
 .padding{
+
     background-color: #87cefac4;
     margin-top: 51px;
+
 }
 
 .btn{
+
     background-color: whitesmoke;
     color: black !important;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
