@@ -1,28 +1,27 @@
-// ajax ->
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        var data = this.responseText;
-        jsonData(data);
-    }
-}
-
-xmlhttp.open("GET", "data.json", true);
-xmlhttp.send();
+// using AJAX to fetch data without loading the page
+// AJAX = Asynchronous JavaScript and XML
+// Different kind of status -> 
+// 200 -> "OK", 403 = "Forbidden", 404 = "Not Found";
 
 
-function jsonData(json_object) {
+document.getElementById('get_data').addEventListener('click', loadData);
 
-    var js_object = JSON.parse(json_object);
+function loadData() {
 
+    // creating XHR -> xml http request object 
 
-    for (x in js_object.gamers) {
-        var gamerS = js_object.gamers;
+    let xhr = new XMLHttpRequest();
 
-        for (y in gamerS[x]){
+    xhr.open('GET', 'data.txt', true);
 
-            console.log(gamerS[x][y]);
+    xhr.onload = function () {
+
+        if (this.status === 200) {
+
+            document.getElementById('output').innerHTML = `<h2>${this.responseText}</h2>`;
+
         }
     }
+
+    xhr.send();
 }
