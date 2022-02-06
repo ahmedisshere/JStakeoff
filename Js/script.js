@@ -31,7 +31,7 @@ function loadJokes() {
 
             jokes.forEach (function(item) {
 
-                output += `<li>${item.joke}</li>`
+                output += `<li>${item.joke}</li>`;
 
             });
 
