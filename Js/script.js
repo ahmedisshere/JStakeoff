@@ -48,21 +48,35 @@ let persons = [
 
 ]
 
-function createPerson(person,callback) {
+function createPerson(person) {
 
-    setTimeout(function () {
-
+    let prom = new Promise(function (resolve, reject) {
         persons.push(person);
-        callback();
 
-    }, 2000);
+        let error = false;
+
+        if (!error) {
+
+            resolve();
+
+        }
+        else {
+
+            reject(" Error! -> Something wrong! ");
+
+        }
+
+        resolve();
+    });
+
+    return prom;
 }
 
 function getPerson() {
 
     setTimeout(function () {
 
-        let output = "" ;
+        let output = "";
 
         persons.forEach(function (person) {
 
@@ -75,7 +89,11 @@ function getPerson() {
     }, 500);
 }
 
-createPerson({firstName: "boomer", lastName: "game"}, getPerson);
+createPerson({ firstName: "boomer", lastName: "game" }).then(getPerson).catch(function (err) {
+
+    console.log(err);
+
+});
 
 
 
