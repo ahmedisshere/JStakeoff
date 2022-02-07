@@ -1,49 +1,33 @@
-// https://www.icndb.com/api/
 
-document.getElementById('get_data').addEventListener('click', loadJokes);
+// Callback functions
 
 
-function loadJokes() {
+let persons = [
 
-    let number = document.getElementById('numberJokes').value;
+    { firstName: "tausif", lastName: "Ahmed" },
+    { firstName: "Nabiha", lastName: "Tahsin" }
 
-    let xhr = new XMLHttpRequest();
+]
 
-    console.log (number) ;
+function createPerson(person) {
 
-    xhr.open( 'GET', `http://api.icndb.com/jokes/random/${number}`, true );
+    setTimeout(function () {
 
-    xhr.onprogress = function(){
+        persons.push(person);
 
-        document.getElementById('output').innerHTML = "<h4> Down the rabbithole . . . </h4>";
+    }, 4000);
+}
 
-    }
+function getPerson() {
 
-    xhr.onload = function () {
+    setTimeout(function (person) {
 
-        if (this.status === 200) {
+        let output = '';
 
-            let data = JSON.parse(this.responseText);
+        persons.forEach(function () {
 
-            let jokes = data.value;
+            output += `<li>${person.firstName} ${person.lastName}</li>`;
 
-            output = "<ul>";
-
-            jokes.forEach (function(item) {
-
-                output += `<li>${item.joke}</li>`;
-
-            });
-
-            output += "</ul>";
-
-            console.log(jokes);
-
-            document.getElementById('output').innerHTML = ` <h5> ${output} </h5> `;
-
-        }
-    }
-
-    xhr.send();
-
+        })
+    }, 1000);
 }
