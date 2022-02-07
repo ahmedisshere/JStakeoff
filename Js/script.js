@@ -55,7 +55,7 @@ function createPerson(person,callback) {
         persons.push(person);
         callback();
 
-    }, 4000);
+    }, 2000);
 }
 
 function getPerson() {
@@ -72,7 +72,7 @@ function getPerson() {
 
         document.getElementById('output').innerHTML = output;
 
-    }, 1000);
+    }, 500);
 }
 
 createPerson({firstName: "boomer", lastName: "game"}, getPerson);
