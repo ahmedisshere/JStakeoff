@@ -2,6 +2,45 @@
 // Callback functions
 
 
+// let persons = [
+
+//     { firstName: "tausif", lastName: "Ahmed" },
+//     { firstName: "Nabiha", lastName: "Tahsin" }
+
+// ]
+
+// function createPerson(person) {
+
+//     setTimeout(function () {
+
+//         persons.push(person);
+
+//     }, 4000);
+// }
+
+// function getPerson() {
+
+//     setTimeout(function () {
+
+//         let output = '';
+
+//         persons.forEach(function (person) {
+
+//             output += `<li> ${person.firstName} ${person.lastName} </li>`
+
+//         });
+
+//         document.getElementById('output').innerHTML = output;
+
+//     }, 1000);
+// }
+
+// createPerson({firstName: "boomer", lastName: "game"});
+
+// getPerson();
+
+
+
 let persons = [
 
     { firstName: "tausif", lastName: "Ahmed" },
@@ -9,25 +48,34 @@ let persons = [
 
 ]
 
-function createPerson(person) {
+function createPerson(person,callback) {
 
     setTimeout(function () {
 
         persons.push(person);
+        callback();
 
     }, 4000);
 }
 
 function getPerson() {
 
-    setTimeout(function (person) {
+    setTimeout(function () {
 
-        let output = '';
+        let output = "" ;
 
-        persons.forEach(function () {
+        persons.forEach(function (person) {
 
-            output += `<li>${person.firstName} ${person.lastName}</li>`;
+            output += `<li> ${person.firstName} ${person.lastName} </li>`;
 
-        })
+        });
+
+        document.getElementById('output').innerHTML = output;
+
     }, 1000);
 }
+
+createPerson({firstName: "boomer", lastName: "game"}, getPerson);
+
+
+
