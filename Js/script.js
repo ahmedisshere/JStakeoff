@@ -43,8 +43,8 @@
 
 let persons = [
 
-    { firstName: "tausif", lastName: "Ahmed" },
-    { firstName: "Nabiha", lastName: "Tahsin" }
+    { firstName: "John", lastName: "doe" },
+    { firstName: "Jane", lastName: "Doe" }
 
 ]
 
