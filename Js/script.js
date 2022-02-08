@@ -62,7 +62,7 @@ function createPerson(person) {
         }
         else {
 
-            reject(" Error! -> Something wrong -> go rewatch Error Handling ! ");
+            reject(" Error! -> Something wrong --> go rewatch Error Handling ! ");
 
         }
 
