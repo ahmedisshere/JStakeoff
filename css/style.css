@@ -5,7 +5,8 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
     font-variant: small-caps;
-    
+    padding-top: 240px;
+    align-items: center;
 
 }
 .main:hover{
@@ -23,7 +24,7 @@
 
 .btn{
 
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
     color: black !important;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
@@ -32,5 +33,5 @@
 
 .btn:hover{
     color: white !important;
-    background-color: #13C1E3;
+    background-color: #0a7a91 !important;
 }
