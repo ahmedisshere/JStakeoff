@@ -7,7 +7,7 @@ let form = document.querySelector('#book-form');
 // Book Class ->
 
 class Book {
-    constructor(title, author, isbn){
+    constructor(title, author, isbn) {
 
         this.title = title;
         this.author = author;
@@ -20,10 +20,10 @@ class Book {
 // UI class, which will add the submissions in the table -> 
 
 class UI {
-    constructor(){
+    constructor() {
 
     }
-    addToBookList(book){
+    addToBookList(book) {
 
         let list = document.querySelector('#book-list');
         let row = document.createElement('tr');
@@ -36,12 +36,31 @@ class UI {
         list.appendChild(row);
     }
 
-    clearFields(){
+    clearFields() {
 
-        document.querySelector("#title").value = '' ;
-        document.querySelector("#author").value = '' ;
-        document.querySelector("#isbn").value = '' ;
+        document.querySelector("#title").value = '';
+        document.querySelector("#author").value = '';
+        document.querySelector("#isbn").value = '';
     }
+
+    showAlert(message, className) {
+
+        let div = document.createElement('div');
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(message));
+        let container = document.querySelector('.container');
+        let form = document.querySelector('#book-form');
+        container.insertBefore(div, form);
+
+
+        setTimeout( () => {
+
+            document.querySelector('.alert').remove();
+
+        }, 3000);
+
+    }
+
 }
 
 
@@ -53,18 +72,30 @@ form.addEventListener('submit', newBook);
 // Defining functions ->
 
 
-function newBook(e){
-    
+function newBook(e) {
+
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
-    let isbn = document.querySelector("#isbn").value; 
-
-    let book = new Book(title,author,isbn);
+    let isbn = document.querySelector("#isbn").value;
     let ui = new UI;
-    ui.addToBookList(book);
 
-    ui.clearFields();
+    if (title === '' || author === '' || isbn === '') {
 
+        ui.showAlert("Please fill all the fields!", "error");
+    }
+
+    else {
+
+        let book = new Book(title, author, isbn);
+
+        ui.addToBookList(book);
+
+        ui.clearFields();
+
+        ui.showAlert("Book Added!", "success");
+
+
+
+    }
     e.preventDefault();
-
 }
