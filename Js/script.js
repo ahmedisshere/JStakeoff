@@ -93,7 +93,7 @@ function newBook(e) {
 
         ui.clearFields();
 
-        ui.showAlert("Book Added!", "success");
+        ui.showAlert("Your Book Has Been Added!", "success");
     }
     
     e.preventDefault();
