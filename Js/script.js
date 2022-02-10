@@ -20,6 +20,7 @@ class Book {
 // UI class, which will add the submissions in the table -> 
 
 class UI {
+
     constructor() {
 
     }
@@ -81,7 +82,7 @@ function newBook(e) {
 
     if (title === '' || author === '' || isbn === '') {
 
-        ui.showAlert("Please fill all the fields!", "error");
+        ui.showAlert("Please fill-up all the fields!", "error");
     }
 
     else {
