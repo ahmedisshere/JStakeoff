@@ -68,6 +68,7 @@ class UI {
 // Adding event listener ->
 
 form.addEventListener('submit', newBook);
+booklist.addEventListener('click', removeBook);
 
 
 // Defining functions ->
