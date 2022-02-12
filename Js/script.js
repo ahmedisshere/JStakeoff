@@ -64,6 +64,8 @@ class UI {
         if (target.hasAttribute('href')) {
 
             target.parentElement.parentElement.remove();
+            Store.removeBook(target.parentElement.previousElementSibling.textContent.trim());
+
             UI.showAlert('Book Removed!', 'error');
 
         }
@@ -71,10 +73,62 @@ class UI {
 }
 
 
+// Local Storage class ->>
+
+class Store {
+
+    static getBooks() {
+
+        let books;
+        if (localStorage.getItem('books') === null) {
+            books = [];
+        }
+        else {
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+        return books;
+    }
+
+    static addBook(book) {
+
+        let books = Store.getBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+
+    }
+
+    static displayBooks() {
+
+        let books = Store.getBooks();
+
+        books.forEach(book => {
+
+            UI.addToBookList(book);
+
+        });
+    }
+
+    static removeBook(isbn) {
+
+        let books = Store.getBooks();
+
+        books.forEach((book, index) => {
+
+            if (book.isbn === isbn) {
+                books.splice(index, 1);
+            }
+        })
+
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+}
+
 // Adding event listener ->
 
 form.addEventListener('submit', newBook);
 booklist.addEventListener('click', removeBook);
+document.addEventListener('DOMContentLoaded', Store.displayBooks());
 
 
 // Defining functions ->
@@ -85,7 +139,7 @@ function newBook(e) {
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
     let isbn = document.querySelector("#isbn").value;
-    
+
 
     if (title === '' || author === '' || isbn === '') {
 
@@ -101,6 +155,8 @@ function newBook(e) {
         UI.clearFields();
 
         UI.showAlert("Your Book Has Been Added!", "success");
+
+        Store.addBook(book);
     }
 
     e.preventDefault();
@@ -109,7 +165,7 @@ function newBook(e) {
 
 function removeBook(e) {
 
-    
+
     UI.deleteFromBook(e.target);
     e.preventDefault();
 
