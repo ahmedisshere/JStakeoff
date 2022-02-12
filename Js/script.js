@@ -54,7 +54,7 @@ class UI {
         container.insertBefore(div, form);
 
 
-        setTimeout( () => {
+        setTimeout(() => {
 
             document.querySelector('.alert').remove();
 
@@ -62,6 +62,14 @@ class UI {
 
     }
 
+    deleteFromBook(target) {
+
+        if (target.hasAttribute('href')) {
+
+            target.parentElement.parentElement.remove();
+
+        }
+    }
 }
 
 
@@ -96,6 +104,16 @@ function newBook(e) {
 
         ui.showAlert("Your Book Has Been Added!", "success");
     }
-    
+
     e.preventDefault();
+}
+
+
+function removeBook(e) {
+
+    let ui = new UI();
+    ui.deleteFromBook(e.target);
+    ui.showAlert('Book Removed!', 'success');
+    e.preventDefault();
+
 }
