@@ -64,6 +64,7 @@ class UI {
         if (target.hasAttribute('href')) {
 
             target.parentElement.parentElement.remove();
+            UI.showAlert('Book Removed!', 'error');
 
         }
     }
@@ -110,7 +111,6 @@ function removeBook(e) {
 
     
     UI.deleteFromBook(e.target);
-    UI.showAlert('Book Removed!', 'success');
     e.preventDefault();
 
 }
