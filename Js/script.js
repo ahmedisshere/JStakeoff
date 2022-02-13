@@ -16,7 +16,16 @@ let gamer = {
     dob: "05-03-1996"
 }
 
-let {fname,...lname} = gamer;
+let { fname, ...lname } = gamer;
 
 console.log(fname);
 console.log(lname);
+
+
+let test = (name, ...numbers) => {
+
+    console.log(name);
+    console.log(numbers);
+};
+
+test( "markeloff", 56, 767, 78, 69, 436, 234 );
