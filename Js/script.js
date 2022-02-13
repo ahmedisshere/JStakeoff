@@ -18,14 +18,18 @@ let gamer = {
 
 let { fname, ...lname } = gamer;
 
-console.log(fname);
-console.log(lname);
+// console.log(fname);
+// console.log(lname);
 
 
-let test = (name, ...numbers) => {
+let moreNum = [86, 123, 5434, 123, 3];
+
+let test = (name, ...numbers) => {  // ... is being used as rest operator here
 
     console.log(name);
     console.log(numbers);
 };
 
 test( "markeloff", 56, 767, 78, 69, 436, 234 );
+
+test( "fatman", ...moreNum );    // ... is being used as a spread operator here
