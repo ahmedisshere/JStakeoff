@@ -1,26 +1,19 @@
-//JavaScript Promises ->
+// Iterator ->
 
-let prom = new Promise((resolve, reject) => {
+let iterable = "fatman";
 
-    let a;
+iterable = [1,2,3,4,5,6];
 
-    setTimeout(()=>{
+let iter = iterable[Symbol.iterator]();
 
-        let a = 1 + 2 ;
-        if (a == 2) {
-            resolve('Success');
-        }
-        else {
-            reject('Failed');
-        }
-    },4000);
-});
+console.log(iter);
+console.log(iter.next().value);
+console.log(iter.next().value);
+console.log(iter.next().value);
 
-prom.then((message) => {
-    console.log('I\'m from then ' + message);
-}).catch((message) => {
-    console.log('I\'m from catch ' + message);
-});
+console.log("some other bullshit...");
 
+console.log(iter.next().value);
+console.log(iter.next().value);
+console.log(iter.next().value);
 
-console.log('im after promise');
