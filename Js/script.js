@@ -1,35 +1,33 @@
-// Rest Operator -> ... same as spread but the action is reverse, collects the items from an array/object/any an stores them in different array/object/any
+// Difference between ES5 constructor function and ES6 class -->>
 
-let fruits = ["apple", "mango", "grape"];
+// ES5 constructor function ->
 
-let [f, ...s] = fruits;
+// function Person(name, age) {
 
-console.log(f);
-console.log(s);
+//     this.name = name;
+//     this.age = age;
+// }
 
-// Rest with objects ->
+// Person.prototype.fuckName = function(){
 
-let gamer = {
-
-    fname: "fatman",
-    lname: "cartman",
-    dob: "05-03-1996"
-}
-
-let { fname, ...lname } = gamer;
-
-// console.log(fname);
-// console.log(lname);
+//     console.log(this.name);
+// }
 
 
-let moreNum = [86, 123, 5434, 123, 3];
+// ES6 Class ->
 
-let test = (name, ...numbers) => {  // ... is being used as rest operator here
+class Person {
+    constructor(name, age) {
 
-    console.log(name);
-    console.log(numbers);
+        this.name = name;
+        this.age = age;
+    }
+
+    fuckName() {
+        console.log(this.name);
+    }
 };
 
-test( "markeloff", 56, 767, 78, 69, 436, 234 );
-
-test( "fatman", ...moreNum );    // ... is being used as a spread operator here
+let person1 = new Person("cartman", 97);
+console.log(person1);
+console.log(person1.fuckName());
