@@ -1,22 +1,26 @@
-// Javascript Symbols
+//JavaScript Promises ->
 
-let a = Symbol();
+let prom = new Promise((resolve, reject) => {
 
-let gamer = {
+    let a;
 
-    name: "markeloff",
-    age: 73,
-    [a]: "xantaress peek"
+    setTimeout(()=>{
 
-}
+        let a = 1 + 2 ;
+        if (a == 2) {
+            resolve('Success');
+        }
+        else {
+            reject('Failed');
+        }
+    },4000);
+});
 
-console.log(gamer);
-console.log(Object.getOwnPropertyNames(gamer));
-console.log(Object.getOwnPropertySymbols(gamer));
-console.log(Object.keys(gamer));
-console.log(JSON.stringify(gamer));
+prom.then((message) => {
+    console.log('I\'m from then ' + message);
+}).catch((message) => {
+    console.log('I\'m from catch ' + message);
+});
 
-for (x in gamer){
 
-    console.log(x);
-};
+console.log('im after promise');
