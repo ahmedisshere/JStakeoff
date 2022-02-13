@@ -1,13 +1,6 @@
-//
+// Arrow functions details ->
+// curly braces can be avoided when there is only one statement
 
+let getSquare = num => {return num*num;}
 
-var a = 7;
-a = a + 7;
-var a;
-
-let b = 6;
-b = b *68;
-let b = 5;
-
-const c = 7;
-c = 324; 
+console.log(getSquare(4));
