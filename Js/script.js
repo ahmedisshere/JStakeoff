@@ -1,17 +1,22 @@
-// Spread Operator with function ->
+// Rest Operator -> ... same as spread but the action is reverse, collects the items from an array/object/any an stores them in different array/object/any
 
-let numbers = [69,23,1,9,0,-69];
+let fruits = ["apple", "mango", "grape"];
 
-console.log(Math.max(...numbers));
+let [f, ...s] = fruits;
 
+console.log(f);
+console.log(s);
 
-let gamer = ["cartman","fatman","markeloff"];
+// Rest with objects ->
 
-let test = (fname,mname,lname) => {
+let gamer = {
 
-    console.log(`Hello ${fname} ${mname} ${lname}`);
-};
+    fname: "fatman",
+    lname: "cartman",
+    dob: "05-03-1996"
+}
 
-test(gamer[0],gamer[1],gamer[2]); // this can be simplified by spread operator ->
+let {fname,...lname} = gamer;
 
-test(...gamer);  // <- Like this
+console.log(fname);
+console.log(lname);
