@@ -1,33 +1,22 @@
-// Difference between ES5 constructor function and ES6 class -->>
+// Javascript Symbols
 
-// ES5 constructor function ->
+let a = Symbol();
 
-// function Person(name, age) {
+let gamer = {
 
-//     this.name = name;
-//     this.age = age;
-// }
+    name: "markeloff",
+    age: 73,
+    [a]: "xantaress peek"
 
-// Person.prototype.fuckName = function(){
+}
 
-//     console.log(this.name);
-// }
+console.log(gamer);
+console.log(Object.getOwnPropertyNames(gamer));
+console.log(Object.getOwnPropertySymbols(gamer));
+console.log(Object.keys(gamer));
+console.log(JSON.stringify(gamer));
 
+for (x in gamer){
 
-// ES6 Class ->
-
-class Person {
-    constructor(name, age) {
-
-        this.name = name;
-        this.age = age;
-    }
-
-    fuckName() {
-        console.log(this.name);
-    }
+    console.log(x);
 };
-
-let person1 = new Person("cartman", 97);
-console.log(person1);
-console.log(person1.fuckName());
