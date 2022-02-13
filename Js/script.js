@@ -1,7 +1,17 @@
-// array destructing ->
+// Swaping variables ->
 
-let fruits = ["apple","mango","grape"];
+let a;
+let b;
 
-let [,fruit2,fruit3] = fruits;
+a = 9;
+b = 45;
 
-console.log(fruit2,fruit3);
+// let temp = a;
+// a = b;                -> to avoid this ->>
+// b = temp;
+
+
+[ a , b ] = [ b , a ];  // -> Similar to array destructing
+
+
+console.log(`a = ${a} and b = ${b}`);
