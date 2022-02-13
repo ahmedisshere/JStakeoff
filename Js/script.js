@@ -9,7 +9,7 @@ let getSquare = num =>  num*num; // This way we can minify an arrow function
 
 // callback functions with foreach ->
 
-let numbers = [1,2,3,4,5,6];
+let numbers = [1,2,3,4,5,6,7];
 
 let printAll = item => console.log(item);
 
