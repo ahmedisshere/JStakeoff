@@ -1,22 +1,30 @@
-// Object destructing ->
+// Getting started with spread operator -> ... (Which is three dots)
 
+let str = "markeloff";
+
+let newStr = [...str];
+
+// console.log(newStr);
+
+let fruit1 = ["mango", "grape", "apple"];
+let fruit2 = ["banana", "orange"];
+let newfruit = "jackfruit";
+
+let newArr = [newfruit, ...fruit1, ...fruit2];
+
+console.log(newArr);
+
+
+// Spread operator on Objects (ES8 feature) ->
 
 let person = {
 
-    firstName: "nahid",
-    lastName: "bkash",
-    dob: "08-09-1992"
+    fname: "cartman",
+    lname: "fatman"
 
-}
+};
 
-// let fname = person.firstName,
-//     lname = person.lastName,
-//     ddob = person.dob;
 
-// let { firstName, lastName, dob } = person;
+let newPerson = { ...person, dob: "03-05-1996" };
 
-// console.log(fname, lname, ddob);
-
-let display = ({ firstName, lastName, dob }) => { console.log(firstName, lastName, dob); }
-
-display(person);
+console.log(newPerson);
