@@ -17,7 +17,7 @@ function customIterator (arr) {
     return {
         next: function(){
 
-            return i < arr.length ? { value: arr[i++], done: false} : {done: true};
+            return i < arr.length ? { value: arr[i++], done: false} : {value: undefined, done: true};
         }
     };
 };
@@ -26,5 +26,8 @@ let gamers = customIterator(ign);
 
 console.log(gamers.next().value);
 console.log(gamers.next().value);
+console.log("random bullshit ...");
 console.log(gamers.next().value);
 console.log(gamers.next().value);
+console.log(gamers.next());
+
