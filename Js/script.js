@@ -15,13 +15,12 @@ function customIterator (arr) {
     let i = 0;
 
     return {
-
         next: function(){
 
-            return i < arr.length ? { value: arr[i++], done: false} : {done: true}
+            return i < arr.length ? { value: arr[i++], done: false} : {done: true};
         }
-    }
-}
+    };
+};
 
 let gamers = customIterator(ign);
 
