@@ -11,7 +11,7 @@ function* genFunction() {
     yield "movemint";
     yield 69;
     yield "bullshit";
-}
+};
 
 let iter = genFunction();
 
