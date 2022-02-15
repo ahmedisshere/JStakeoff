@@ -6,14 +6,26 @@ iterable = [1,2,3,4,5,6];
 
 let iter = iterable[Symbol.iterator]();
 
-console.log(iter);
-console.log(iter.next().value);
-console.log(iter.next().value);
-console.log(iter.next().value);
+// Lets make a custom iterator ->
 
-console.log("some other bullshit goes here....");
+let ign = ["cartman","fatman","markeloff","movemint"];
 
-console.log(iter.next().value);
-console.log(iter.next().value);
-console.log(iter.next().value);
+function customIterator (arr) {
 
+    let i = 0;
+
+    return {
+
+        next: function(){
+
+            return i < arr.length ? { value: arr[i++], done: false} : {done: true}
+        }
+    }
+}
+
+let gamers = customIterator(ign);
+
+console.log(gamers.next().value);
+console.log(gamers.next().value);
+console.log(gamers.next().value);
+console.log(gamers.next().value);
