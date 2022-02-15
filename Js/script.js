@@ -11,7 +11,7 @@ console.log(iter.next().value);
 console.log(iter.next().value);
 console.log(iter.next().value);
 
-console.log("some other bullshit....");
+console.log("some other bullshit goes here....");
 
 console.log(iter.next().value);
 console.log(iter.next().value);
