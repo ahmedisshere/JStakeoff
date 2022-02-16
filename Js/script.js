@@ -1,7 +1,7 @@
 // Sets -->>
 // sets are unique,cant store duplicate items like array
 
-let mySet = new Set([1,2,3,4,4,5]); 
+let mySet = new Set([1, 2, 3, 4, 4, 5]);
 
 mySet.add("fatman");
 mySet.add(9);
@@ -17,10 +17,19 @@ mySet.delete("fatman");
 
 // Iterating sets -->>
 
-// for (x of mySet){
+// for (x of mySet.entries()){
 
 //     console.log(x);
 // }
 
-let iter = mySet.entries();
-console.log(iter);
+// let iter = mySet.entries();
+// console.log(iter.next());
+
+// for (let [x] of mySet.entries()){
+//     console.log(x);
+// }
+
+let iter = [...mySet.values()];
+
+// console.log(iter);
+mySet.forEach(value => console.log(value));
