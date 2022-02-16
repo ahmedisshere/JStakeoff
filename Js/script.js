@@ -1,21 +1,20 @@
-// Custome generator -->>
+// async await 
 
-function* genFunction() {
+// fetch('http://api.icndb.com/jokes/random/5000')
 
-    yield 1;
-    console.log("Go moo your neighbours lawn");
-    yield "fatman";
-    console.log("Go moo your neighbours lawn");
-    console.log("Go moo your neighbours lawn");
-    yield 2;
-    yield "movemint";
-    yield 69;
-    yield "bullshit";
-};
+//         .then(response => response.json())
+//         .then(data => console.log(data));
 
-let iter = genFunction();
+//         console.log("fatman");
 
-console.log(iter.next().value);
-console.log(iter.next().value);
-console.log(iter.next().value);
-console.log(iter.next().value);
+
+// async ->
+
+async function getJokes () {
+
+    let response = await fetch('http://api.icndb.com/jokes/random/5000');
+    let data = await response.json();
+    return data;
+}
+
+getJokes().then(jokes => console.log(jokes));
