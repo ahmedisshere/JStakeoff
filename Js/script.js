@@ -30,6 +30,8 @@ myMap.set("third key", 69);
 
 // let arr = Array.from(myMap.keys()); // -> getting just the keys in the array
 
-let arr = Array.from(myMap.values()); // -> getting the valus 
+let arr = Array.from(myMap.values()); // -> getting the valus
 
 console.log(arr);
+
+api.github.com/users/a
