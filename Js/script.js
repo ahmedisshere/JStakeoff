@@ -1,35 +1,24 @@
-// Sets -->>
-// sets are unique,cant store duplicate items like array
+// Map ->>
 
-let mySet = new Set([1, 2, 3, 4, 4, 5]);
+let myMap = new Map(
 
-mySet.add("fatman");
-mySet.add(9);
+    [
+        ["first key", 10],
+        ["second key", "fatman"]
+    ]
+);
 
-// console.log(mySet);
+myMap.set("third key", 69);
 
-// deleting from a set ->
+// console.log(myMap);
 
-mySet.delete("fatman");
-
-// console.log(mySet.size);
-// console.log(mySet.has(5));
-
-// Iterating sets -->>
-
-// for (x of mySet.entries()){
+// for(let x of myMap.values()){
 
 //     console.log(x);
 // }
 
-// let iter = mySet.entries();
-// console.log(iter.next());
+// foreach -> generally in foreach loop, first parameter passes value and second parameter passes index, But in MAP first parameter passes value and second parameter passes KEY**
 
-// for (let [x] of mySet.entries()){
-//     console.log(x);
-// }
-
-let iter = [...mySet.values()];
-
-// console.log(iter);
-mySet.forEach(value => console.log(value));
+myMap.forEach((x,y)=>{    // -> foreach works differently for map parameter wise
+    console.log(x,y);
+})
