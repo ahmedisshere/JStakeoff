@@ -1,20 +1,26 @@
-// async await 
+// Sets -->>
+// sets are unique,cant store duplicate items like array
 
-// fetch('http://api.icndb.com/jokes/random/5000')
+let mySet = new Set([1,2,3,4,4,5]); 
 
-//         .then(response => response.json())
-//         .then(data => console.log(data));
+mySet.add("fatman");
+mySet.add(9);
 
-//         console.log("fatman");
+// console.log(mySet);
 
+// deleting from a set ->
 
-// async ->
+mySet.delete("fatman");
 
-async function getJokes () {
+// console.log(mySet.size);
+// console.log(mySet.has(5));
 
-    let response = await fetch('http://api.icndb.com/jokes/random/5000');
-    let data = await response.json();
-    return data;
-}
+// Iterating sets -->>
 
-getJokes().then(jokes => console.log(jokes));
+// for (x of mySet){
+
+//     console.log(x);
+// }
+
+let iter = mySet.entries();
+console.log(iter);
